@@ -51,6 +51,8 @@ function parsePropertyChild(dag: dict<string[]>, name: string, node: ts.Node) {
         case ts.SyntaxKind.PropertyAccessExpression:
             parsePropertyAccessExpression(dag, name, <ts.PropertyAccessExpression>node);
             break;
+            case ts.SyntaxKind.BinaryExpression:
+            break;
         default:
             node.forEachChild(child => parsePropertyChild(dag, name, child))
             break;
