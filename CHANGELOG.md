@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.3] - 2019-01-28
+
+- Improved parsing logic
+
 ## [1.0.1] - 2019-01-27
 
 ### Added
