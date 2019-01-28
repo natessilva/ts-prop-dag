@@ -1,41 +1,40 @@
 {
-    "name": "graphviz-preview",
-    "version": "1.3.0",
-    "publisher": "EFanZh",
+    "name": "ts-prop-dag",
+    "version": "1.0.0",
+    "publisher": "natessilva",
     "engines": {
         "vscode": "^1.26.1"
     },
     "license": "SEE LICENSE IN LICENSE",
-    "displayName": "Graphviz Preview",
-    "description": "Preview Graphviz (DOT) files.",
+    "displayName": "TS Property DAG",
+    "description": "Preview Class property declarations that depend on other declarations as a digraph (DOT).",
     "categories": [
         "Programming Languages"
     ],
     "keywords": [
         "dot",
         "graphviz",
-        "preview"
+        "preview",
+        "typescript"
     ],
     "main": "./out/extension",
     "contributes": {
         "languages": [
             {
-                "id": "dot",
+                "id": "typescript",
                 "aliases": [
-                    "Graphviz",
-                    "DOT"
+                    "Typescript"
                 ],
                 "extensions": [
-                    ".dot",
-                    ".gv"
+                    ".ts"
                 ]
             }
         ],
         "commands": [
             {
-                "command": "graphviz.showPreview",
+                "command": "propDAG.showPreview",
                 "title": "Show Preview",
-                "category": "Graphviz",
+                "category": "Prop DAG",
                 "icon": {
                     "dark": "resources/show-preview-dark.svg",
                     "light": "resources/show-preview-light.svg"
@@ -43,9 +42,9 @@
             }
         ],
         "configuration": {
-            "title": "Graphviz Preview",
+            "title": "TS Property Declaration DAG",
             "properties": {
-                "graphvizPreview.dotPath": {
+                "propDAG.dotPath": {
                     "description": "The path of the dot program.",
                     "type": [
                         "string",
@@ -53,7 +52,7 @@
                     ],
                     "default": null
                 },
-                "graphvizPreview.engine": {
+                "propDAG.engine": {
                     "description": "The layout engine to use.",
                     "type": [
                         "string",
@@ -70,15 +69,15 @@
         "menus": {
             "editor/title": [
                 {
-                    "command": "graphviz.showPreview",
+                    "command": "propDAG.showPreview",
                     "group": "navigation",
-                    "when": "editorLangId == dot"
+                    "when": "editorLangId == typescript"
                 }
             ]
         }
     },
     "activationEvents": [
-        "onCommand:graphviz.showPreview"
+        "onCommand:propDAG.showPreview"
     ],
     "devDependencies": {
         "@types/mocha": "^5.2.5",
@@ -89,6 +88,10 @@
         "vscode": "^1.1.26",
         "webpack": "^4.27.1",
         "webpack-cli": "^3.1.2"
+    },
+    "dependencies": {
+        "@types/node": "^10.12.15",
+        "typescript": "^3.2.2"
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
@@ -101,6 +104,6 @@
     "icon": "resources/icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/EFanZh/Graphviz-Preview"
+        "url": "https://github.com/natessilva/Graphviz-Preview"
     }
 }

@@ -4,8 +4,9 @@ import * as engines from "./engines";
 import { ExtensionRequest, ExtensionResponse, PreviewRequest, PreviewResponse } from "./messages";
 import { createMessenger, IMessagePort, IReceiveMessage, ISendMessage } from "./messenger";
 import { createScheduler } from "./scheduler";
+import { parseText } from "./parse";
 
-const previewType = "graphviz.preview";
+const previewType = "propDAG.preview";
 
 class PreviewPort implements
     IMessagePort<ISendMessage<PreviewRequest, ExtensionResponse>, IReceiveMessage<PreviewResponse, ExtensionRequest>> {
@@ -109,7 +110,7 @@ export class PreviewManager {
                 switch (message.type) {
                     case "export":
                         await this.exportImage(
-                            document.getText(),
+                            parseText(document.getText()),
                             message.image,
                             documentDir
                         );
@@ -133,7 +134,7 @@ export class PreviewManager {
 
         // Add event handlers.
 
-        const updatePreview = () => scheduler(document.getText());
+        const updatePreview = () => scheduler(parseText(document.getText()));
 
         webviewPanel.onDidDispose(() => this.previewContexts.delete(document));
 

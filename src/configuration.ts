@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 
-export const sectionName = "graphvizPreview";
+export const sectionName = "propDAG";
 
 export function getNullableConfiguration<T>(name: string, defaultValue: T): T {
     const configuration = vscode.workspace.getConfiguration(sectionName);

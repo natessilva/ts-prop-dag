@@ -4,7 +4,7 @@ import * as engines from "./engines";
 import { PreviewManager } from "./previewManager";
 import * as utilities from "./utilities";
 
-const previewCommand = "graphviz.showPreview";
+const previewCommand = "propDAG.showPreview";
 
 // Extension interfaces.
 
