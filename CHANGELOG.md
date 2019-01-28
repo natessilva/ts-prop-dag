@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.1] - 2019-01-27
+
+### Added
+
+- Added npm deps to package.json
+
+## [1.0.0] - 2019-01-27
+
+### Changed
+
+- Forked from github.com/EFanZh/Graphviz-Preview. All previous history included below.
+- Added simple Typescript parsing logic to transform a Typescript classes property declarations into a DOT digraph.
+
 ## [Unreleased]
 
 ## [1.3.0] - 2018-09-16

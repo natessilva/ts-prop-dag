@@ -1,20 +1,20 @@
-# Graphviz Preview
+# TS Property DAG
 
-An extension for Visual Studio Code to preview Graphviz (DOT) files.
+An extension for Visual Studio Code to preview Typescript classes as directed acyclic graphs using Graphviz (DOT).
 
-![Graphviz Preview screenshot](resources/screenshot.png)
+![screenshot](resources/screenshot.png)
 
 ## Installation
 
 You can install this extension from the
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=EFanZh.graphviz-preview).
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=natessilva.ts-prop-dag).
 
 ## Usage
 
 ### Open preview
 
 Open the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) (usually by
-pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>), then select “Graphviz: Show Preview”.
+pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>), then select “Prop DAG: Show Preview”.
 
 ### Manipulate preview
 
@@ -42,30 +42,13 @@ To export the generated graph, click the “Export” button on the top right co
 
 | Configuration             | Type               | Description                                                                                                                                       |
 | ------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `graphvizPreview.dotPath` | `string` \| `null` | `null` means to use the “dot” program in your `PATH` environment variable, or a `string` value to indicate the “dot” program you want to use. |
-| `graphvizPreview.engine`  | `"dot"` \| `null`  | The layout engine to use. `null` means to use the “dot” layout engine. Currently, only the “dot” engine is supported.                         |
+| `propDag.dotPath` | `string` \| `null` | `null` means to use the “dot” program in your `PATH` environment variable, or a `string` value to indicate the “dot” program you want to use. |
+| `propDag.engine`  | `"dot"` \| `null`  | The layout engine to use. `null` means to use the “dot” layout engine. Currently, only the “dot” engine is supported.                         |
 
-Make sure the extension can find the “dot” program. You can set `graphvizPreview.dotPath` option to the path of the dot
+Make sure the extension can find the “dot” program. You can set `propDag.dotPath` option to the path of the dot
 executable, or make sure the directory containing the dot program is in your `PATH` environment variable.
 
-To set the `graphvizPreview.dotPath` option, go to File → Preference → Settings.
-
-## Roadmap
-
-- [x] Add border and shadow to indicate the graph border.
-- [x] Allow user to save the generated graph.
-- [x] Report error if the source is invalid.
-- [x] Apply configuration change without restart.
-- [x] Allow user to manipulate preview with keyboard.
-- [ ] Add CI integration.
-- [ ] Add animation for zooming.
-- [x] Take a new screenshot.
-- [ ] Allow user to configure the default zoom mode.
-- [x] Add a preview button for source editor.
-- [x] Add cancellation support in scheduler.
-- [ ] Support previewing source containing multiple graphs.
-- [ ] Design a better icon.
-- [ ] Apply [Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy) to webview.
+To set the `propDag.dotPath` option, go to File → Preference → Settings.
 
 ## Known issues
 
