@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.5] - 2019-05-31
+
+- Package updates
+
 ## [1.0.3] - 2019-01-28
 
 - Improved parsing logic
@@ -35,7 +39,7 @@
 ### Added
 
 - Add a button to open preview to the source editor if current editor’s language is
-  [DOT](https://en.wikipedia.org/wiki/DOT_(graph_description_language)).
+  [DOT](<https://en.wikipedia.org/wiki/DOT_(graph_description_language)>).
 
 ### Fixed
 
@@ -102,7 +106,7 @@
 
 - Initial release.
 
-[Unreleased]: https://github.com/EFanZh/Graphviz-Preview/compare/v1.3.0...master
+[unreleased]: https://github.com/EFanZh/Graphviz-Preview/compare/v1.3.0...master
 [1.3.0]: https://github.com/EFanZh/Graphviz-Preview/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/EFanZh/Graphviz-Preview/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/EFanZh/Graphviz-Preview/compare/v1.0.0...v1.1.0

@@ -1,109 +1,110 @@
 {
-    "name": "ts-prop-dag",
-    "version": "1.0.4",
-    "publisher": "natessilva",
-    "engines": {
-        "vscode": "^1.26.1"
-    },
-    "license": "SEE LICENSE IN LICENSE",
-    "displayName": "TS Property DAG",
-    "description": "Preview Class property declarations that depend on other declarations as a digraph (DOT).",
-    "categories": [
-        "Programming Languages"
-    ],
-    "keywords": [
-        "dot",
-        "graphviz",
-        "preview",
-        "typescript"
-    ],
-    "main": "./out/extension",
-    "contributes": {
-        "languages": [
-            {
-                "id": "typescript",
-                "aliases": [
-                    "Typescript"
-                ],
-                "extensions": [
-                    ".ts"
-                ]
-            }
+  "name": "ts-prop-dag",
+  "version": "1.0.5",
+  "publisher": "natessilva",
+  "engines": {
+    "vscode": "^1.26.1"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "displayName": "TS Property DAG",
+  "description": "Preview Class property declarations that depend on other declarations as a digraph (DOT).",
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "dot",
+    "graphviz",
+    "preview",
+    "typescript"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "languages": [
+      {
+        "id": "typescript",
+        "aliases": [
+          "Typescript"
         ],
-        "commands": [
-            {
-                "command": "propDAG.showPreview",
-                "title": "Show Preview",
-                "category": "Prop DAG",
-                "icon": {
-                    "dark": "resources/show-preview-dark.svg",
-                    "light": "resources/show-preview-light.svg"
-                }
-            }
-        ],
-        "configuration": {
-            "title": "TS Property Declaration DAG",
-            "properties": {
-                "propDAG.dotPath": {
-                    "description": "The path of the dot program.",
-                    "type": [
-                        "string",
-                        "null"
-                    ],
-                    "default": null
-                },
-                "propDAG.engine": {
-                    "description": "The layout engine to use.",
-                    "type": [
-                        "string",
-                        "null"
-                    ],
-                    "enum": [
-                        "dot",
-                        null
-                    ],
-                    "default": null
-                }
-            }
-        },
-        "menus": {
-            "editor/title": [
-                {
-                    "command": "propDAG.showPreview",
-                    "group": "navigation",
-                    "when": "editorLangId == typescript"
-                }
-            ]
+        "extensions": [
+          ".ts"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "propDAG.showPreview",
+        "title": "Show Preview",
+        "category": "Prop DAG",
+        "icon": {
+          "dark": "resources/show-preview-dark.svg",
+          "light": "resources/show-preview-light.svg"
         }
-    },
-    "activationEvents": [
-        "onCommand:propDAG.showPreview"
+      }
     ],
-    "devDependencies": {
-        "@types/mocha": "^5.2.5",
-        "@types/node": "^10.12.15",
-        "concurrently": "^3.6.1",
-        "tslint": "^5.11.0",
-        "typescript": "^3.2.2",
-        "vscode": "^1.1.26",
-        "webpack": "^4.27.1",
-        "webpack-cli": "^3.1.2"
+    "configuration": {
+      "title": "TS Property Declaration DAG",
+      "properties": {
+        "propDAG.dotPath": {
+          "description": "The path of the dot program.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "propDAG.engine": {
+          "description": "The layout engine to use.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "dot",
+            null
+          ],
+          "default": null
+        }
+      }
     },
-    "dependencies": {
-        "@types/node": "^10.12.15",
-        "typescript": "^3.2.2"
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p . && webpack",
-        "watch": "concurrently --kill-others --allow-restart --restart-after 500 -r \"tsc -p . -w\" \"webpack -w\"",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "lint": "tslint -p .",
-        "test": "npm run lint && npm run compile && node ./node_modules/vscode/bin/test"
-    },
-    "icon": "resources/icon.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/natessilva/Graphviz-Preview"
+    "menus": {
+      "editor/title": [
+        {
+          "command": "propDAG.showPreview",
+          "group": "navigation",
+          "when": "editorLangId == typescript"
+        }
+      ]
     }
+  },
+  "activationEvents": [
+    "onCommand:propDAG.showPreview"
+  ],
+  "devDependencies": {
+    "@types/mocha": "~5.2.7",
+    "@types/node": "~12.0.4",
+    "concurrently": "~4.1.0",
+    "fstream": "^1.0.12",
+    "tslint": "~5.17.0",
+    "typescript": "~3.5.1",
+    "vscode": "~1.1.34",
+    "webpack": "~4.32.2",
+    "webpack-cli": "~3.3.2"
+  },
+  "dependencies": {
+    "@types/node": "~12.0.4",
+    "typescript": "~3.5.1"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p . && webpack",
+    "watch": "concurrently --kill-others --allow-restart --restart-after 500 -r \"tsc -p . -w\" \"webpack -w\"",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "lint": "tslint -p .",
+    "test": "npm run lint && npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "icon": "resources/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natessilva/Graphviz-Preview"
+  }
 }
