@@ -1,6 +1,6 @@
 {
   "name": "ts-prop-dag",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "natessilva",
   "engines": {
     "vscode": "^1.26.1"
@@ -82,7 +82,7 @@
   "devDependencies": {
     "@types/mocha": "~5.2.7",
     "@types/node": "~12.0.4",
-    "concurrently": "~4.1.0",
+    "concurrently": "~4.1.1",
     "fstream": "^1.0.12",
     "tslint": "~5.17.0",
     "typescript": "~3.5.1",
