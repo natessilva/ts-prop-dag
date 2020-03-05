@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.7] - 2020-03-05
+
+- Package updates
+
 ## [1.0.6] - 2019-07-25
 
 - Package updates

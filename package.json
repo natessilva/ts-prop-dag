@@ -1,6 +1,6 @@
 {
   "name": "ts-prop-dag",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publisher": "natessilva",
   "engines": {
     "vscode": "^1.26.1"
