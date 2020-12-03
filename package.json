@@ -1,6 +1,6 @@
 {
   "name": "ts-prop-dag",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "publisher": "natessilva",
   "engines": {
     "vscode": "^1.26.1"
@@ -82,13 +82,13 @@
   "devDependencies": {
     "@types/mocha": "~5.2.7",
     "@types/node": "~12.0.4",
-    "concurrently": "~4.1.1",
+    "concurrently": "^5.3.0",
     "fstream": "^1.0.12",
     "tslint": "~5.17.0",
     "typescript": "~3.5.1",
-    "vscode": "~1.1.34",
+    "vscode": "~1.1.37",
     "webpack": "~4.32.2",
-    "webpack-cli": "~3.3.2"
+    "webpack-cli": "^4.2.0"
   },
   "dependencies": {
     "@types/node": "~12.0.4",
@@ -105,6 +105,6 @@
   "icon": "resources/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/natessilva/Graphviz-Preview"
+    "url": "https://github.com/natessilva/ts-prop-dag"
   }
 }
