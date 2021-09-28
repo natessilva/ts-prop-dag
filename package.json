@@ -1,9 +1,9 @@
 {
   "name": "ts-prop-dag",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "publisher": "natessilva",
   "engines": {
-    "vscode": "^1.26.1"
+    "vscode": "^1.55.0"
   },
   "license": "SEE LICENSE IN LICENSE",
   "displayName": "TS Property DAG",
@@ -82,12 +82,13 @@
   "devDependencies": {
     "@types/mocha": "~5.2.7",
     "@types/node": "~12.0.4",
+    "@types/vscode": "^1.55.0",
     "concurrently": "^5.3.0",
     "fstream": "^1.0.12",
     "tslint": "~5.17.0",
     "typescript": "~3.5.1",
-    "vscode": "~1.1.37",
-    "webpack": "~4.32.2",
+    "vscode-test": "^1.5.2",
+    "webpack": "^5.54.0",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
@@ -98,9 +99,7 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p . && webpack",
     "watch": "concurrently --kill-others --allow-restart --restart-after 500 -r \"tsc -p . -w\" \"webpack -w\"",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "lint": "tslint -p .",
-    "test": "npm run lint && npm run compile && node ./node_modules/vscode/bin/test"
+    "lint": "tslint -p ."
   },
   "icon": "resources/icon.png",
   "repository": {
